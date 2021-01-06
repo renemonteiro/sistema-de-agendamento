@@ -65,7 +65,7 @@ This is a portfolio repository with the objective of training. The API below all
     ```
 
 ## Database structure:
-![DatabaseDiagram](backend/databaseDiagram.png)
+![DatabaseDiagram](databaseDiagram.png)
  
 
 
