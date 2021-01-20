@@ -14,6 +14,9 @@ export class SchedulerController{
 
             const result = await schedulerBusiness.getAvailableScheduler()
 
+
+
+
             res.send({result})
 
         } catch (error) {

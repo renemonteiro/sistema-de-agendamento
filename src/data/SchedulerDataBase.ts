@@ -25,7 +25,8 @@ export class SchedulerDataBase{
             const result = await knex.raw(`
             select hours as hours,
             price as price,
-            day as day
+            day as day,
+            availability as availability
             from scheduler
             order by day asc;
             `)
