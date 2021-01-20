@@ -22,7 +22,6 @@ This is a portfolio repository with the objective of training. The API below all
     $ git clone https://github.com/renemonteiro/sistema-de-agendamento.git
     ```
 
-
 2. Create dotenv file:
 
     ```jsx
@@ -61,6 +60,7 @@ This is a portfolio repository with the objective of training. The API below all
 
 ## Database structure:
 ![DatabaseDiagram](databaseDiagram.png)
+
  
 
 
