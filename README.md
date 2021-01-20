@@ -22,13 +22,13 @@ This is a portfolio repository with the objective of training. The API below all
     $ git clone https://github.com/renemonteiro/sistema-de-agendamento.git
     ```
 
-3. Create dotenv file:
+2. Create dotenv file:
 
     ```jsx
     $ touch .env
     ```
 
-4. Insert the environment variables on dotenv:
+3. Insert the environment variables on dotenv:
 
     ```
     DB_HOST = 
@@ -44,13 +44,13 @@ This is a portfolio repository with the objective of training. The API below all
     MAILER_USER =
     ```
 
-5. Install dependencies:
+4. Install dependencies:
 
     ```jsx
     $ npm install
     ```
 
-6. Run the project: 
+5. Run the project: 
 
     ```jsx
     $ npm run start 
@@ -61,6 +61,7 @@ This is a portfolio repository with the objective of training. The API below all
 ## Database structure:
 ![DatabaseDiagram](databaseDiagram.png)
 
+ 
 
 
 
