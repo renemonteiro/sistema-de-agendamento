@@ -10,13 +10,7 @@ export class SchedulerController{
     ){}
     public async getAvailableScheduler(req:Request, res:Response){
         try {
-            
-
             const result = await schedulerBusiness.getAvailableScheduler()
-
-
-
-
             res.send({result})
 
         } catch (error) {
