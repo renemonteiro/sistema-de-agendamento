@@ -23,7 +23,8 @@ export class SchedulerDataBase{
     public async getAvailableScheduler():Promise <any>{
         try {
             const result = await knex.raw(`
-            select hours as hours,
+            select id as id,
+            hours as hours,
             price as price,
             day as day,
             availability as availability
