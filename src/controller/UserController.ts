@@ -40,7 +40,7 @@ export class UserController{
     }
     public async signup(req:Request, res: Response){
         try {
-            const {name, nickname, email, pass} = req.body
+            const {name, nickname, email, pass} = req.body 
 
             const type = "NORMAL"
 

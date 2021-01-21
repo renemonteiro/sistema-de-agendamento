@@ -38,8 +38,8 @@ export class UserBusiness{
             // await EmailModels.Welcome(inputEmail)
 
             const token = this.tokenGenerator.generate({id, type})
-                        
-            return {token}
+            
+            return {token, id}
         } catch (error) {
             throw new Error(error.message || error.sqlMessage)
         }
@@ -67,8 +67,8 @@ export class UserBusiness{
                 throw new Error("Password or email incorrect")
             }
             const token = this.tokenGenerator.generate({id: user.getId(), type:user.getType()})
-
-            return {token}
+            const id = {id:user.getId()}
+            return {token, id} 
         } catch (error) {
             throw new Error(error)
             
