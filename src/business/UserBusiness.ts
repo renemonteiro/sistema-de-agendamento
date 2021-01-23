@@ -38,8 +38,12 @@ export class UserBusiness{
             // await EmailModels.Welcome(inputEmail)
 
             const token = this.tokenGenerator.generate({id, type})
-            
-            return {token, id}
+            const profile = {
+                id,
+                type,
+                name
+            }
+            return {token, profile}
         } catch (error) {
             throw new Error(error.message || error.sqlMessage)
         }
@@ -68,7 +72,13 @@ export class UserBusiness{
             }
             const token = this.tokenGenerator.generate({id: user.getId(), type:user.getType()})
             const id = {id:user.getId()}
-            return {token, id} 
+            const profile ={
+                id:user.getId(),
+                type:user.getType(),
+                name:user.getName()
+
+            }
+            return {token, profile} 
         } catch (error) {
             throw new Error(error)
             

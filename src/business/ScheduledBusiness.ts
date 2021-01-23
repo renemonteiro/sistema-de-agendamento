@@ -35,7 +35,7 @@ export class ScheduledBusiness{
             const user = await scheduledDataBase.getScheduled(id_scheduler)
          
             const {name, email, day, hour,price}  = user
-            await EmailModels.scheduled(name, email, day, hour,price)
+            // await EmailModels.scheduled(name, email, day, hour,price)
             
             return { id_user, id_scheduler}
             
