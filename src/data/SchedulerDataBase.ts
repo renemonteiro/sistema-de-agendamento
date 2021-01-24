@@ -85,6 +85,18 @@ export class SchedulerDataBase{
 
     }
 
+    public async avoidRepetitionId(id:string){
+        try {
+            const result = await knex.raw(`
+            select count(id) as id_agenda from ${SchedulerDataBase.tableName}
+            where id = '${id}'
+            `)
+            return result[0][0]
+        } catch (error) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    }
+
     public async createScheduler(input: InputScheduler){
         const {id, day, hours, availability, price} = input
         try {

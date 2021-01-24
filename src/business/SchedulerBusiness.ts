@@ -56,19 +56,26 @@ export class SchedulerBusiness{
         }
     }
 
-    public async deleteScheduler(id:any, nivel:string){
+    public async deleteScheduler(id:string, nivel:string){
         
         try { 
             
-            if(!id && !nivel){
+            if(!id || !nivel){
                 throw new Error("Missin input")
             }
     
             if(nivel !== 'ADMIN' && nivel !== 'SUPERADMIN'){
                 throw new Error("Permission Denided")
             }
+
+            const {id_agenda}  = await this.schedulerDataBase.avoidRepetitionId(id)
+            
+            if(!id_agenda){
+                throw new Error("no time scheduled")
+            }
     
             await this.schedulerDataBase.deleteScheduler(id)
+
     
             return "horário excluido"
 
