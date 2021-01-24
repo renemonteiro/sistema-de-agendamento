@@ -18,7 +18,7 @@ export class ScheduledDataBase{
             inner join users on users.id = scheduled_user.id_user
             inner join scheduler on scheduler.id = scheduled_user.id_scheduler;
             `)
-            return result[0][0] 
+            return result[0] 
         } catch (error) {
             throw new Error(error)
 

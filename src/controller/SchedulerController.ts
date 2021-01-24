@@ -56,9 +56,8 @@ export class SchedulerController{
 
             const tokenData:AuthenticationData = tokenGenerator.verify(token)        
 
-            // const result =  await schedulerBusiness.deleteScheduler(req.body.id,tokenData.type)
             const result =  await schedulerBusiness.deleteScheduler(
-                req.body.id,
+                req.params.id,
                 tokenData.type)
             
             res.send({result})
