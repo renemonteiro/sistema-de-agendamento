@@ -2,12 +2,12 @@ import express from 'express'
 import UserController  from '../controller/UserController' 
 
 
-export const router = express.Router()
+export const user = express.Router()
 
 
-router.post("/user/createadmin",          UserController.createAdmin) 
-router.post("/user/signup",               UserController.signup) 
-router.post("/user/login",                UserController.login) 
-router.put("/user/update/:id",            UserController.update) 
-router.delete("/user/delete/:id",         UserController.delete) 
+user.post("/user/createadmin",          UserController.createAdmin) 
+user.post("/user/signup",               UserController.signup) 
+user.post("/user/login",                UserController.login) 
+user.put("/user/update/:id",            UserController.update) 
+user.delete("/user/delete/:id",         UserController.delete) 
 
